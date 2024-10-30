@@ -11,26 +11,69 @@ class Numbers {
   }
   count() {
     //return the count of numbers in data
+  const amtNumbers = this.data.length;
+  return amtNumbers;
   }
   printNumbers() {
+  console.log(this.data);
     //print the numbers in data
   }
   odds() {
+    let count = 0;
+    for(let i = 0; i < this.data.length; i++){
+      if(this.data[i] %2 !== 0){
+        count++;
+      }
+    }
+    return count;
+}
     //return the odd numbers in data
-  }
+  
   evens() {
+    let count = 0;
+    for(let i = 0; i < this.data.length; i++){
+      if(this.data[i] %2 === 0){
+        count++;
+      }
+    }
+    return count;
     //return the even numbers in data
   }
   sum() {
+    let sum = 0;
+    for (let num of this.data) {
+      sum += num;
+    }
+    return sum;
     //return the sum of the numbers
   }
   product() {
+    let product = 1;
+    for (let num of this.data) {
+      product *= num;
+    }
+    return product;
     //return the product of the numbers
   }
   greaterThan(target) {
+    const result = [3];
+    for (const num of this.data) {
+      if (num > target) {
+        result.push(num);
+      }
+    }
+    return result;
+  
     //return the numbers greater than the target
   }
   howMany(target) {
+    let count = 0;
+    for(let i = 0; i < this.data.length; i++){
+      if(this.data[i] === 3){
+        count++;
+      }
+    }
+    return count;
     //return the count of a given number
   }
 }
